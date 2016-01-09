@@ -3,18 +3,46 @@
 <head>
   <title>Xiv2</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'mystyles'%>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.name %></strong>.
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-  <% end %>
+  <header>
+    <nav role="navigation" class="navbar navbar-inverse">
+          <div class="navbar-header">
+              <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <h2>XIV</h2>
+          </div>
+
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a class="round-ghost">UPGRADE</a></li>
+                <li><i class="fa fa-bell-o fa-2x"></i></li>
+                <li><i class="fa fa-envelope-o fa-2x"></i></li>
+                <li><img class="avi" src="images/feet.png"/></li>
+              </ul>
+              <p class="navbar-text pull-right">
+                <% if user_signed_in? %>
+            Logged in as:  <%= current_user.email %>
+                  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                <% else %>
+                  <!-- <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> | -->
+                  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+                <% end %>
+              </p>
+          </div>
+      </nav>
+  </header>
 
   <% if notice %>
     <p class="alert alert-success"><%= notice %></p>

@@ -1,0 +1,648 @@
+/********************************************************************************HEADER STYLES**************************************************************************************/
+
+header{
+	background-color: #110026;
+	height: 70px;
+	position: relative;
+	width: 100%;
+}
+
+.navbar-inverse {
+  height: 70px;
+	background-color: #110026;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+.round-ghost{
+	  display: inline-block;
+  	width: 100px;
+  	font-size: 12px;
+  	color: #fff;
+  	border: 2px solid #fff;
+  	text-align: center;
+  	outline: none;
+		padding: 1px !important;
+		border-radius: 50px;
+  	background: transparent;
+  	text-decoration: none;
+	  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+
+.round-ghost:hover, .round-ghost:active{
+	cursor: pointer;
+	background-color: #fff !important;
+	color: #000 !important;
+	border: 2px solid #000;
+	transition: background-color 0.3s ease-in,
+							color 0.3s ease-in;
+}
+
+.avi{
+	height:50px;
+  width:50px;
+  overflow:hidden;
+  border-radius:50%;
+	border: 2px solid #fff;
+	margin-top: -10px;
+}
+
+.navbar-right >li{
+	margin-left: 50px;
+		margin-top: 20px;
+}
+/********************************************************************************HEADER STYLES**************************************************************************************/
+
+
+
+
+
+
+
+
+
+/**********************************************************************GENERAL BODY STYLES**************************************************************************************/
+
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+	font-size: 5em;
+}
+
+p{
+	font-size: 1.2em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+img{
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.whitelayer{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(255,255,255,0.7);
+	top: 0;
+	left: 0;
+}
+
+.blacklayer{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0,0,0,0.8);
+	top: 0;
+	left: 0;
+}
+
+.semilayer{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	top: 0;
+	left: 0;
+}
+
+input[type=radio]{
+	color: #000;
+	width: 5%;
+	padding: 10px;
+	margin-left: 40%;
+}
+
+.fade > label{
+	color: #000;
+}
+
+/********************************************************************************GENERAL BODY STYLES**************************************************************************************/
+
+
+
+
+
+
+
+/********************************************************************************SECTION STYLES**************************************************************************************/
+
+section{
+	max-width: 100%;
+	width: 100%;
+	min-height: 850px;
+}
+
+/********************Section #home********************/
+#home{
+	background-image: url(/assets/homebg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+}
+
+.signup{
+	background-color: rgba(255,255,255,0.3);
+	height: 60%;
+	position: absolute;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.field > label{
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.signup > h2{
+	padding-left: 20px;
+}
+
+.icpurple{
+	color: #110026;
+}
+
+form > span{
+	color: #000;
+}
+
+.kati > input{
+	width: 20%;
+}
+
+input{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #000;
+	background-color: transparent;
+	width: 100%;
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+form{
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 10px;
+}
+
+.ghost{
+	display: inline-block;
+  	width: 100%;
+  	font-weight: bold;
+  	font-size: 20px;
+  	padding: 15px;
+  	color: #110026;
+  	border: 3px solid #110026;
+  	text-align: center;
+  	outline: none;
+  	background: transparent;
+  	text-decoration: none;
+	 transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+
+.ghost:hover,
+.ghost:active{
+	background-color: #110026;
+  	color: #fff;
+  	border: 3px solid #110026;
+ 	transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+}
+
+/********************Section #home********************/
+
+
+
+
+/********************Section #how********************/
+#how{
+	background-image: url(/assets/heartpen.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	color: #000;
+}
+/********************Section #how********************/
+
+
+
+
+/********************Section #plans********************/
+#plans{
+	background-image: url(/assets/darklock.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	color: #fff;
+}
+
+.semilayer > .text-center{
+	margin-bottom: 1em;
+}
+
+.basictitle{
+	background-color: #800080;
+	height: 4em;
+}
+
+.basicbody{
+	border: 4px solid #800080;
+	padding: 15px;
+}
+
+.basicbody > ul >li, .premiumbody > ul > li {
+	font-size: 1.5em;
+	line-height: 1.5em;
+	list-style-type: none;
+	font-family: 'Open Sans', sans-serif;
+	padding: 10px;
+	margin-left: -25px;
+}
+
+.basictitle > h2{
+	font-size: 2.5em;
+	text-align: center;
+	line-height: 1.7em;
+}
+
+.premiumtitle{
+	background-color: #ff0000;
+	height: 4em;
+}
+
+.premiumbody{
+	border: 4px solid #ff0000;
+	padding: 15px;
+}
+
+/*.premiumbody > ul >li {
+	font-size: 1.5em;
+	list-style-type: none;
+}*/
+
+.premiumtitle > h2{
+	font-size: 2.5em;
+	text-align: center;
+	line-height: 1.7em;
+}
+
+/********************Section #plans********************/
+
+
+
+
+/********************Section #social*******************/
+#social{
+	background-image: url(/assets/feet.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	color: #fff;
+
+}
+
+.rule{
+	bottom: 40px;
+	position: absolute;
+	width: 100%;
+}
+
+div > .fa{
+	font-size: 15em;
+	margin-top: 170px;
+}
+
+div > .fa-facebook-square{
+	color: #3B5998;
+}
+
+div > .fa-twitter-square{
+	color: #4099FF;
+}
+
+div > .fa-youtube-square{
+	color: #E52D27;
+}
+
+div > .fa-instagram{
+	color: #895A4D;
+}
+/********************Section #social********************/
+
+
+
+/********************Section #profile********************/
+#profile{
+	background-image: url(/assets/profilebg.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	color: #fff;
+}
+
+
+.profcard{
+	background: #fff;
+	height: 80%;
+	position: absolute;
+	vertical-align: center;
+	margin-top: 7%;
+	border-radius:6px;
+	color: #110026;
+}
+
+.left-title{
+	font-size: 3px;
+}
+
+.left-title > i{
+	margin-left: 0.4em;
+	margin-right: 0.4em;
+	margin-top: 1.5em;
+}
+
+.left-title > i:hover, .left-title > i:active{
+	color: #ED1C24;
+}
+
+.img-circle{
+	height:140px;
+    width:140px;
+    overflow:hidden;
+    border-radius:50%;
+    margin-top: 30px;
+}
+
+.details{
+	margin-top: 3em;
+}
+
+.details >div{
+	font-size: 1.5em;
+	margin:7px;
+}
+
+hr{
+	height: 1px;
+	color: #110026;
+}
+
+.imgstrip{
+	height:160px;
+	width:160px;
+	margin-top: 280px;
+}
+
+.caret{
+	color: #fff;
+	position: fixed;
+	vertical-align: middle;
+}
+
+/********************Section #profile********************/
+
+
+
+/********************Section #complete********************/
+#complete{
+	background-image: url(/assets/completebg.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	color: #fff;
+}
+.tab-pane > input[type=text]{
+	width: 50%;
+	margin-top: 200px;
+}
+
+tab-pane > input[type=radio]{
+	color: #000 !important;
+	width: 50%;
+	position: relative;
+}
+
+.tab-pane> i{
+	font-size: 2em;
+	color: #110026;
+}
+
+/********************Section #complete********************/
+
+
+/******************************************************************************** END SECTION STYLES**************************************************************************************/
+
+
+/**************************Tabs Stylez**************************/
+.board{
+   width: 100%;
+	margin: 300px auto;
+	height: auto;
+}
+
+.board2{
+	margin-top: 140px;
+}
+
+.greystrip{
+	background: #EFEEEE;
+	height: 110px;
+	margin: 0px 8px;
+	position: relative;
+}
+
+.board .nav-tabs {
+    position: relative;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+
+.board > div.board-inner{
+    background-size: 30%;
+}
+
+p.narrow{
+    width: 60%;
+    margin: 20px auto;
+    color: #000;
+}
+
+.browseprof > .tab-pane > p.narrow{
+	margin: 100px auto;
+}
+
+.liner{
+    height: 3px;
+    background: #110026;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #ED1C24;
+    cursor: default;
+    border: 0;
+    border-bottom-color: transparent;
+}
+
+
+span.round-tabs{
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    border-radius: 100px;
+		border: 3px solid #110026;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+		background: #EFEEEE;
+}
+
+span.round-tabs > i{
+	margin-top: 20%;
+}
+
+span.round-tabs2{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+}
+
+span.round-tabs2 > i{
+
+}
+
+
+.nav-tabs > li {
+    width: 16.6%;
+}
+
+.nav-tabs li > a{
+	color: #ccc;
+}
+
+.nav-tabs li > a:hover, .nav-tabs li > a:active{
+	color: #ED1C24;
+}
+
+li:after {
+    content: " ";
+    position: absolute;
+    left: 45%;
+   opacity:0;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 5px solid transparent;
+    border-bottom-color: #ddd;
+    transition:0.1s ease-in-out;
+
+}
+li.active:after {
+    content: " ";
+    position: absolute;
+    left: 45%;
+   opacity:1;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #ddd;
+
+}
+.nav-tabs > li a{
+   width: 70px;
+   height: 70px;
+   margin: 20px auto;
+   border-radius: 100%;
+   padding: 0;
+}
+
+.nav-tabs > li a:hover{
+    background: transparent;
+}
+
+.tab-content{
+
+}
+
+.tab-pane{
+  position: relative;
+	padding-top: 30px;
+}
+
+
+
+
+
+@media( max-width : 585px ){
+
+    .board {
+width: 90%;
+height:auto !important;
+}
+    span.round-tabs {
+        font-size:16px;
+width: 50px;
+height: 50px;
+line-height: 50px;
+    }
+    .tab-content .head{
+        font-size:20px;
+        }
+    .nav-tabs > li a {
+width: 50px;
+height: 50px;
+line-height:50px;
+}
+
+li.active:after {
+content: " ";
+position: absolute;
+left: 35%;
+}
+
+.btn-outline-rounded {
+    padding:12px 20px;
+    }
+}
+
+
+/**************************Tabs Stylez**************************/
