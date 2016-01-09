@@ -52,6 +52,18 @@ header{
 .navbar-right >li{
 	margin-left: 50px;
 		margin-top: 20px;
+		color: #fff;
+}
+
+.navbar-right >li:hover{
+	cursor: pointer;
+}
+
+.navbar-header > h2{
+	color: #fff;
+	font-size: 40px;
+	line-height: 70px;
+	margin-top: 0;
 }
 /********************************************************************************HEADER STYLES**************************************************************************************/
 
@@ -180,6 +192,7 @@ form > span{
 
 .kati > input{
 	width: 20%;
+	margin-left: 10%;
 }
 
 input{
