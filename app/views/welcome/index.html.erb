@@ -1,2 +1,158 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<section id="home">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-offset-7 col-md-3 col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 signup">
+
+        <h2>SIGN UP</h2>
+
+        <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name), label_errors: true) do |f| %>
+          <%= devise_error_messages! %>
+
+          <div class="field">
+            <%= f.text_field_without_bootstrap :name, autofocus: true %>
+            <%= f.label :name %>
+          </div>
+
+          <div class="field">
+            <label for="user_sex">I'm a : </label>
+            <span class="kati">
+              <%= radio_button_tag(:sex, "male") %>
+              <i class="fa fa-male fa-2x icpurple"></i>
+              <%= radio_button_tag(:sex, "female") %>
+              <i class="fa fa-female fa-2x icpurple"></i>
+            </span>
+          </div>
+
+          <div class="field">
+            <%= f.text_field_without_bootstrap :age%>
+            <%= f.label :age %>
+          </div>
+
+          <div class="field">
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %>
+            <%= f.password_field_without_bootstrap :password, autocomplete: "off" %>
+            <%= f.label :password %>
+          </div>
+
+          <!-- <div class="field">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          </div> -->
+
+          <div class="field">
+            <%= f.email_field_without_bootstrap :email %>
+            <%= f.label :email %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "GET STARTED", class: "ghost"%>
+          </div>
+        <% end %>
+
+        <!-- <%= render "users/shared/links" %> -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="whitelayer">
+    <div class="container-fluid">
+        <h1 class="text-center">How it works</h1>
+      <div class="row">
+        <div class="col-md-offset-3 col-md-2"><%= image_tag('register.png') %></div>
+        <div class="col-md-4">
+          <h2><strong>1. Register for free</strong></h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-3 col-md-4">
+          <h2><strong>2. Browse member profiles</strong></h2>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="col-md-2">
+          <%= image_tag('browse.png') %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-3 col-md-2"><%= image_tag('match.png') %></div>
+        <div class="col-md-4">
+          <h2><strong>3. Find your match</strong></h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="plans">
+  <div class="semilayer">
+    <h1 class="text-center">Plans & Pricing</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-3">
+          <div class="basictitle">
+            <h2>BASIC</h2>
+          </div>
+          <div class="basicbody">
+            <ul>
+              <li><i class="fa fa-edit fa-lg"></i>  Free Registration</li>
+              <li><i class="fa fa-camera fa-lg"></i>  Upload 5 photos</li>
+              <li><i class="fa fa-video-camera fa-lg"></i>  Upload 1 video</li>
+              <li><i class="fa fa-comments-o fa-lg"></i>  Chat with basic users</li>
+              <li><i class="fa fa-users fa-lg"></i>  View basic users' profiles</li>
+              <li><i class="fa fa-money fa-lg"></i>  Free</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-offset-2 col-md-3">
+          <div class="premiumtitle">
+            <h2>PREMIUM</h2>
+          </div>
+          <div class="premiumbody">
+            <ul>
+              <li><i class="fa fa-edit fa-lg"></i>  All basic features</li>
+              <li><i class="fa fa-cloud-upload fa-lg"></i>  Unlimited uploads</li>
+              <li><i class="fa fa-user-secret fa-lg"></i>  See who viewed your profile</li>
+              <li><i class="fa fa-user-plus fa-lg"></i>  Get matched with similar interest users</li>
+              <li><i class="fa fa-money fa-lg"></i>  KES 888</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="social">
+  <div class="blacklayer">
+    <div class="container-fluid">
+        <h1 class="text-center">We are social</h1>
+      <div class="row text-center">
+        <div class="col-md-3"><i class="fa fa-facebook-square fa-5x"></i></div>
+        <div class="col-md-3"><i class="fa fa-twitter-square fa-5x"></i></div>
+        <div class="col-md-3"><i class="fa fa-youtube-square fa-5x"></i></div>
+        <div class="col-md-3"><i class="fa fa-instagram fa-5x"></i></div>
+      </div>
+      <div class="row rule">
+        <div class="col-md-offset-1 col-md-10">
+          <hr/>
+          <p class="text-center">&copy; 2015</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
