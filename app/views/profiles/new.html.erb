@@ -1,0 +1,95 @@
+<section id="complete">
+        <div class="profcard col-md-10 col-md-offset-1">
+
+        </div>
+
+<!-------------------Tabs---------------------->
+
+    <div class="container">
+            <div class="board2">
+              <div class="greystrip">
+                 <ul class="nav nav-tabs text-center col-md-10 col-md-offset-1" id="tabs" data-tabs="tabs">
+                   <div class="liner"></div>
+                    <li class="active"><a href="#location" data-toggle="tab" title="Location"><span class="round-tabs"><i class="fa fa-map-marker fa-3x"></i></span></a> </li>
+
+                    <li><a href="#rship" data-toggle="tab" title="Relationship Status"><span class="round-tabs"><i class="fa fa-heart fa-3x"></i></span></a> </li>
+
+                    <li><a href="#hobbies" data-toggle="tab" title="Hobbies & Interests"><span class="round-tabs"><i class="fa fa-soccer-ball-o fa-3x"></i></span></a> </li>
+
+                     <li><a href="#occupation" data-toggle="tab" title="Occupation"><span class="round-tabs"><i class="fa fa-briefcase fa-3x"></i></span></a></li>
+
+                    <li><a href="#education" data-toggle="tab" title="Education"><span class="round-tabs"><i class="fa fa-graduation-cap fa-3x"></i></span></a></li>
+
+
+
+                    <li><a href="#phone" data-toggle="tab" title="Bio"><span class="round-tabs"><i class="fa fa-phone fa-3x"></i></span></a> </li>
+                </ul>
+              </div>
+               <%= form_for(@profile) do |f| %>
+               <% if @profile.errors.any? %>
+                 <div id="error_explanation">
+                   <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+                   <ul>
+                   <% @profile.errors.full_messages.each do |message| %>
+                     <li><%= message %></li>
+                   <% end %>
+                   </ul>
+                 </div>
+               <% end %>
+
+                 <div class="tab-content">
+                      <div class="tab-pane fade in active" id="location">
+                        <p class="narrow text-center">Hi, Tell me a little more about yourself.<br/>Where do you live?</p><br/>
+                        <%= f.text_field :location, class: "col-md-offset-3"%><br>
+                        <span class="progress">
+                          <i class="fa fa-long-arrow-left fa-2x"></i><i class="fa fa-close fa-2x"></i><i class="fa fa-check fa-2x"></i>
+                        </span>
+                      </div>
+                      <div class="tab-pane fade" id="rship"><p class="narrow text-center">What is your current relationship status?</p><br/>
+                          <%= f.radio_button(:relationship, "single") %>
+                          <%= label_tag(:relationship_single, "Single") %><br>
+                          <%= f.radio_button(:relationship, "divorced") %>
+                          <%= label_tag(:relationship_divorced, "Divorced") %><br>
+                          <%= f.radio_button(:relationship, "widowed") %>
+                          <%= label_tag(:relationship_widowed, "Widowed") %><br>
+                          <%= f.radio_button(:relationship, "relationship") %>
+                          <%= label_tag(:relationship_relationship, "In a relationship") %><br>
+                          <%= f.radio_button(:relationship, "open") %>
+                          <%= label_tag(:relationship_open, "Open Relationship") %>
+                      </div>
+
+                      <div class="tab-pane fade" id="occupation"><p class="narrow text-center">What is your occupation?</p><br/>
+                        <%= f.text_field :occupation, class: "col-md-offset-3"%>
+                      </div>
+
+                      <div class="tab-pane fade" id="education"><p class="narrow text-center">What is your highest level of educational attainment?</p><br/>
+                          <%= f.radio_button(:education, "Primary School") %>
+                          <%= label_tag(:education_primary, "Primary School") %><br>
+                          <%= f.radio_button(:education, "Secondary School") %>
+                          <%= label_tag(:education_secondary, "Secondary School") %><br>
+                          <%= f.radio_button(:education, "College") %>
+                          <%= label_tag(:education_college, "College") %><br>
+                          <%= f.radio_button(:education, "University") %>
+                          <%= label_tag(:education_university, "University") %><br>
+                          <%= f.radio_button(:education, "Postgraduate") %>
+                          <%= label_tag(:education_postgraduate, "Postgraduate") %>
+                      </div>
+
+                      <div class="tab-pane fade" id="hobbies"><p class="narrow text-center">What do you like to do at your free time?</p><br/>
+                        <%= f.text_field :hobbies, class: "col-md-offset-3"%>
+                      </div>
+
+                      <div class="tab-pane fade" id="phone"><p class="narrow text-center">Now {{name}}, would you mind giving me yor phone number?<br/>
+                      (Your contact details will not be displayed without your permission)</p><br/>
+                        <%= f.text_field :phone, class: "col-md-offset-3"%><br><br>
+                        <%= f.submit "Save Profile", class: "btn btn-primary", :width => 60%>
+                      </div>
+                </div>
+                 <% end %>
+          </div>
+    </div>
+
+<!---------------------------------Tabs-------------->
+
+</section>

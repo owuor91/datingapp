@@ -1,0 +1,77 @@
+<section id="profile">
+  <!--<div class="container">
+      <div class="row">
+        <div class="col-md-1 caret"> <i class="fa fa-angle-left fa-2x" title="previous"></i></div>-->
+        <div class="profcard col-md-10 col-md-offset-1">
+          <div class="row">
+            <div class="col-md-3 col-md-offset-1 left-title">
+              <i class="fa fa-heart-o" title="favourite"></i>
+              <i class="fa fa-comments-o" title="chat"></i>
+              <i class="fa fa-film" title="videos"></i>
+            </div>
+            <div class="col-md-4  text-center"><img src="images/avatar.png" class="img-circle"></div>
+            <div class="col-md-3">
+              <div class="details">
+                <div><strong>Age:</strong> 25</div>
+                <div><strong>Relationship:</strong> <%= @profile.relationship %></div>
+                <div><strong>Location:</strong> <%= @profile.location %></div>
+              </div>
+            </div>
+          </div>
+          <hr width="80%" color="#110026">
+          <div class="row">
+            <div class="text-center col-md-10 col-md-offset-1">
+              <img src="images/feet.png" class="imgstrip"/>
+              <img src="images/match.png" class="imgstrip"/>
+              <img src="images/darklock.png" class="imgstrip"/>
+              <img src="images/browse.png" class="imgstrip"/>
+              <img src="images/heartpen.png" class="imgstrip"/>
+            </div>
+          </div>
+        </div>
+        <!--<div class="col-md-1 caret"> <i class="fa fa-angle-right fa-2x" title="next"></i></div>
+      </div>
+  </div>-->
+  <!-------------------Tabs---------------------->
+
+      <div class="container">
+              <div class="board">
+                   <ul class="nav nav-tabs text-center col-md-10 col-md-offset-1" id="tabs" data-tabs="tabs">
+                      <li class="active"><a href="#phone" data-toggle="tab" title="Phone Number"><span class="round-tabs2"><i class="fa fa-phone fa-3x"></i><br/>PHONE</span></a> </li>
+
+                      <li><a href="#email" data-toggle="tab" title="Email Address"><span class="round-tabs2"><i class="fa fa-envelope fa-3x"></i><br/>EMAIL</span></a> </li>
+
+                       <li><a href="#occupation" data-toggle="tab" title="Occupation"><span class="round-tabs2"><i class="fa fa-briefcase fa-3x"></i><br/>OCCUPATION</span></a></li>
+
+                      <li><a href="#education" data-toggle="tab" title="Education"><span class="round-tabs2"><i class="fa fa-graduation-cap fa-3x"></i><br/>EDUCATION</span></a></li>
+
+                       <li><a href="#hobbies" data-toggle="tab" title="Hobbies &amp; Interests"><span class="round-tabs2"><i class="fa fa-soccer-ball-o fa-3x"></i><br/>HOBBIES</span></a> </li>
+
+                      <li><a href="#bio" data-toggle="tab" title="Bio"><span class="round-tabs2"><i class="fa fa-user fa-3x"></i><br/>BIO</span></a> </li>
+                  </ul>
+
+                   <div class="tab-content browseprof">
+                        <div class="tab-pane fade in active" id="phone"><p class="narrow text-center"><%= @profile.phone %></p></div>
+
+                        <div class="tab-pane fade" id="email"><p class="narrow text-center">owuor91@gmail.com</p></div>
+
+                        <div class="tab-pane fade" id="occupation"><p class="narrow text-center"><%= @profile.occupation %></p></div>
+
+                        <div class="tab-pane fade" id="education"><p class="narrow text-center"><%= @profile.education %></p></div>
+
+                        <div class="tab-pane fade" id="hobbies"><p class="narrow text-center"><%= @profile.hobbies %></p></div>
+
+                        <div class="tab-pane fade" id="bio"><p class="narrow text-center"><%= @profile.bio %></p></div>
+                  </div>
+            </div>
+      </div>
+
+  <!---------------------------------Tabs-------------->
+
+</section>
+
+
+
+
+<!--# <%= link_to 'Edit', edit_profile_path(@profile) %> |
+# <%= link_to 'Back', profiles_path %>-->
