@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160109082051) do
+ActiveRecord::Schema.define(version: 20160109094540) do
+
+  create_table "profiles", force: :cascade do |t|
+    t.integer  "user_id",             limit: 4
+    t.string   "location",            limit: 255
+    t.string   "relationship",        limit: 255
+    t.string   "phone",               limit: 255
+    t.string   "occupation",          limit: 255
+    t.string   "education",           limit: 255
+    t.string   "hobbies",             limit: 255
+    t.text     "bio",                 limit: 65535
+    t.string   "avatar_file_name",    limit: 255
+    t.string   "avatar_content_type", limit: 255
+    t.integer  "avatar_file_size",    limit: 4
+    t.datetime "avatar_updated_at"
+  end
+
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -34,4 +51,5 @@ ActiveRecord::Schema.define(version: 20160109082051) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "profiles", "users"
 end
