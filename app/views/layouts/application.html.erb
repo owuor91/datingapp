@@ -21,12 +21,18 @@
                 <h2>XIV</h2>
               <% elsif current_page?(new_profile_path)%>
                 <h2>Complete your profile</h2>
-                <% elsif current_page?(profile_path)%>
-                  <h2><%= @user.name%></h2>  
+              <% if current_page?(profiles_path)%>
+                <h2><%= @user.name%></h2>
               <% else %>
                   <% if user_signed_in? %>
                   <h2><%= current_user.name %></h2>
                   <%end%>
+              <%end%>
+
+              <% if user_signed_in?%>
+                <% %>
+
+                <%end%>
               <%end%>
           </div>
 
