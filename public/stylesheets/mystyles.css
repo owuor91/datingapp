@@ -376,6 +376,7 @@ div > .fa-instagram{
 	background-repeat: no-repeat;
 	position: relative;
 	color: #fff;
+	height: 800px;
 }
 
 
@@ -384,7 +385,7 @@ div > .fa-instagram{
 	height: 80%;
 	position: absolute;
 	vertical-align: center;
-	margin-top: 7%;
+	margin-top: 2%;
 	border-radius:6px;
 	color: #110026;
 }
@@ -431,11 +432,17 @@ hr{
 	margin-top: 280px;
 }
 
-.caret{
-	color: #fff;
+.caretleft{
 	position: fixed;
-	vertical-align: middle;
+	float: left;
+	margin-left: -90px;
 }
+
+.caretright{
+	position: fixed;
+	margin-left: 85%;
+}
+
 
 /********************Section #profile********************/
 
