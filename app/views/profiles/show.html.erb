@@ -28,8 +28,18 @@
         </div>
       <div class="container">
         <div class="row">
-          <div class="col-md-1 caretleft"> <i class="fa fa-angle-left fa-2x" title="previous"></i></div>
-          <div class="col-md-1 caretright"><i class="fa fa-angle-right fa-2x" title="next"></i></div>
+          <div class="col-md-1 caretleft">
+            <!-- <i class="fa fa-angle-left fa-2x" title="previous"></i> -->
+            <%if @previous%>
+            <%= link_to "previous" ,@previous%>
+            <% end %>
+          </div>
+          <div class="col-md-1 caretright">
+            <!-- <i class="fa fa-angle-right fa-2x" title="next"></i> -->
+            <%if @next%>
+            <%= link_to "next" ,@next%>
+            <%end %>
+          </div>
         </div>
       </div>
   <!-------------------Tabs---------------------->
