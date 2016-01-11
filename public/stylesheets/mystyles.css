@@ -443,6 +443,10 @@ hr{
 	margin-left: 85%;
 }
 
+.caretleft>a, .caretright > a{
+	vertical-align: middle !important;
+}
+
 
 /********************Section #profile********************/
 
