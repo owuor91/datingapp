@@ -16,7 +16,7 @@ Devise.setup do |config|
 
 
   config.omniauth :facebook, "1664360187184957", "bcfe7b799fb5528238c96aa20ffe21a1",
-                callback_url: "CALLBACK_URL"
+                callback_url: "http://localhost:3000/user/auth/facebook/callback"
 
 
   # Configure the class responsible to send e-mails.
