@@ -379,6 +379,14 @@ div > .fa-instagram{
 	height: 800px;
 }
 
+.username{
+	color: #fff;
+	margin-top: -60px;
+	position: absolute;
+	margin-left: 50px;
+	font-size: 3em;
+}
+
 
 .profcard{
 	background: #fff;
