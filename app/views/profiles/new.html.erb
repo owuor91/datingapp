@@ -20,9 +20,9 @@
 
                     <li><a href="#education" data-toggle="tab" title="Education"><span class="round-tabs"><i class="fa fa-graduation-cap fa-3x"></i></span></a></li>
 
-
-
                     <li><a href="#phone" data-toggle="tab" title="Bio"><span class="round-tabs"><i class="fa fa-phone fa-3x"></i></span></a> </li>
+
+                    <li><a href="#avi" data-toggle="tab" title="Avi"><span class="round-tabs"><i class="fa fa-camera-retro fa-3x"></i></span></a> </li>
                 </ul>
               </div>
                <%= form_for(@profile) do |f| %>
@@ -83,7 +83,12 @@
                       <div class="tab-pane fade" id="phone"><p class="narrow text-center">Now <%= current_user.name.split(' ').first %>, would you mind giving me yor phone number?
                       (Your contact details will not be displayed without your permission)</p><br/>
                         <%= f.text_field :phone, class: "col-md-offset-3"%><br><br>
-                         
+
+                      </div>
+
+                      <div class="tab-pane fade" id="avi"><p class="narrow text-center">Finally, please upload your avatar<br/>
+                        <%= f.file_field :avatar, class: "col-md-offset-3"%><br><br>
+
                         <%= f.submit "Save Profile", class: "btn btn-primary", :width => 60%>
                       </div>
                 </div>
