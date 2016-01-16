@@ -1,7 +1,7 @@
 /********************************************************************************HEADER STYLES**************************************************************************************/
 
 header{
-	background-color: #110026;
+	background-color: #28193B;
 	height: 70px;
 	position: relative;
 	width: 100%;
@@ -9,7 +9,7 @@ header{
 
 .navbar-inverse {
   height: 70px;
-	background-color: #110026;
+	background-color: #28193B;
 	padding-left: 50px;
 	padding-right: 50px;
 }
@@ -157,7 +157,7 @@ section{
 
 /********************Section #home********************/
 #home{
-	background-image: url(/assets/homebg.jpg);
+	background-image: url('/assets/homebg.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -183,7 +183,7 @@ section{
 }
 
 .icpurple{
-	color: #110026;
+	color: #28193B;
 }
 
 form > span{
@@ -224,8 +224,8 @@ form{
   	font-weight: bold;
   	font-size: 20px;
   	padding: 15px;
-  	color: #110026;
-  	border: 3px solid #110026;
+  	color: #28193B;
+  	border: 3px solid #28193B;
   	text-align: center;
   	outline: none;
   	background: transparent;
@@ -236,11 +236,19 @@ form{
 
 .ghost:hover,
 .ghost:active{
-	background-color: #110026;
+	background-color: #28193B;
   	color: #fff;
-  	border: 3px solid #110026;
+  	border: 3px solid #28193B;
  	transition: background-color 0.3s ease-in,
               color 0.3s ease-in;
+}
+
+.radio{
+	all: initial;
+  * {
+    all: unset;
+  }
+	line-height:10px;
 }
 
 /********************Section #home********************/
@@ -250,7 +258,7 @@ form{
 
 /********************Section #how********************/
 #how{
-	background-image: url(/assets/heartpen.png);
+	background-image: url('/assets/heartpen.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -395,7 +403,7 @@ div > .fa-instagram{
 	vertical-align: center;
 	margin-top: 2%;
 	border-radius:6px;
-	color: #110026;
+	color: #28193B;
 }
 
 .left-title{
@@ -431,7 +439,7 @@ div > .fa-instagram{
 
 hr{
 	height: 1px;
-	color: #110026;
+	color: #28193B;
 }
 
 .imgstrip{
@@ -482,7 +490,7 @@ tab-pane > input[type=radio]{
 
 .tab-pane> i{
 	font-size: 2em;
-	color: #110026;
+	color: #28193B;
 }
 
 /********************Section #complete********************/
@@ -532,7 +540,7 @@ p.narrow{
 
 .liner{
     height: 3px;
-    background: #110026;
+    background: #28193B;
     position: absolute;
     width: 80%;
     margin: 0 auto;
@@ -556,7 +564,7 @@ span.round-tabs{
     line-height: 70px;
     display: inline-block;
     border-radius: 100px;
-		border: 3px solid #110026;
+		border: 3px solid #28193B;
     z-index: 2;
     position: absolute;
     left: 0;
