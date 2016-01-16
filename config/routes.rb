@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   #devise_for :users
-  devise_for :users, :controllers => { registrations: 'registrations', :omniauth_callbacks => "omniauth_callbacks" }
+  devise_for :users, :controllers => { registrations: 'registrations' }
   get 'welcome/index'
 
   resources :profiles
