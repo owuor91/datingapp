@@ -87,6 +87,11 @@ body {
 
 h1{
 	font-size: 5em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h2{
+	font-family: 'Open Sans', sans-serif;
 }
 
 p{

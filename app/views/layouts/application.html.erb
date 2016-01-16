@@ -41,7 +41,7 @@
                 <li><i class="fa fa-envelope-o fa-2x"></i></li>
 
                   <li><img class="avi" src="/assets/avatarph-aac822842b411310cb92f1b736c7048c09581d6a72a8304a3e964a5c3931da08.png"/></li>
-              
+
               </ul>
               <p class="navbar-text pull-right">
                 <% if user_signed_in? %>
@@ -57,12 +57,7 @@
       </nav>
   </header>
 
-  <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
+  
 <%= yield %>
 
 </body>
