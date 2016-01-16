@@ -157,7 +157,7 @@ section{
 
 /********************Section #home********************/
 #home{
-	background-image: url('/assets/homebg.jpg');
+	background-image: url('/assets/homebg-bc6eb6bf6fb044283cfe5e3a2aff41f3a011da2d5ec4af93c3b46fc602e3a50a.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -251,6 +251,10 @@ form{
 	line-height:10px;
 }
 
+.field{
+	margin-bottom: 10px;
+}
+
 /********************Section #home********************/
 
 
@@ -258,7 +262,7 @@ form{
 
 /********************Section #how********************/
 #how{
-	background-image: url('/assets/heartpen.png');
+	background-image: url('/assets/heartpen-3edc1fcdca0f4cf5064856b48b0a076ddcf073217b19d6020b1f81c7a388d55c.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -272,7 +276,7 @@ form{
 
 /********************Section #plans********************/
 #plans{
-	background-image: url(/assets/darklock.png);
+	background-image: url('/assets/darklock-681ef7cbdb112788a9e86dcb6144c596f7e1be7031eb50b18c04d615a967ff6f.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -337,7 +341,7 @@ form{
 
 /********************Section #social*******************/
 #social{
-	background-image: url(/assets/feet.png);
+	background-image: url('/assets/feet-ffdcd657d8ea1ac6ae914f9dca9ddfa0bf96eb01cd930726e76ac0edb8e9f2e2.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -378,7 +382,7 @@ div > .fa-instagram{
 
 /********************Section #profile********************/
 #profile{
-	background-image: url(/assets/profilebg.png);
+	background-image: url('/assets/profilebg-f64c240742f87e3f4bfa4d7d12ae2f672adc8cbdf89134c72787a4033dd68d04.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -470,7 +474,7 @@ hr{
 
 /********************Section #complete********************/
 #complete{
-	background-image: url(/assets/completebg.png);
+	background-image: url('/assets/completebg-7001e1e422fcf5ef62d45f48420ddf099d3b8f89e01dda6920d71b732a695075.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
