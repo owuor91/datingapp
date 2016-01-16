@@ -40,7 +40,9 @@
                 <li><i class="fa fa-bell-o fa-2x"></i></li>
                 <li><i class="fa fa-envelope-o fa-2x"></i></li>
                 <% if user_signed_in?%>
-                  <li><%= image_tag current_user.profile.avatar, :class => "avi" %></li>
+                  <% if current_user.profile.avatar?%>
+                    <li><%= image_tag current_user.profile.avatar, :class => "avi" %></li>
+                  <%end%>
                 <%else%>
                   <li><img class="avi" src="/assets/avatarph-aac822842b411310cb92f1b736c7048c09581d6a72a8304a3e964a5c3931da08.png"/></li>
                 <%end%>
