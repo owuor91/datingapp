@@ -595,6 +595,13 @@ span.round-tabs2 > i{
 
 }
 
+.nav-tabs{
+	margin-top: -60px;
+}
+
+.showtabs > .nav-tabs > li{
+	width: 16.66%;
+}
 
 .nav-tabs > li {
     width: 14.28%;
