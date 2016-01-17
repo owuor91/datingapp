@@ -157,24 +157,25 @@ input[type=radio]{
 section{
 	max-width: 100%;
 	width: 100%;
-	min-height: 850px;
+	min-height: 700px;
 }
 
 /********************Section #home********************/
 #home{
-	background-image: url('/assets/homebg-bc6eb6bf6fb044283cfe5e3a2aff41f3a011da2d5ec4af93c3b46fc602e3a50a.jpg');
+	background-image: url('/assets/homebg-448d0932efdea79caa4c84a56d852cbb8f58a45d4b198a3ebe5bfa38eadab993.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
 	z-index: 1;
+	height: 700px;
 }
 
 .signup{
 	background-color: rgba(255,255,255,0.3);
-	height: 60%;
+	height: 70%;
 	position: absolute;
-  	top: 50%;
+  	top: 40%;
   	transform: translateY(-50%);
 }
 
@@ -352,7 +353,7 @@ form{
 	background-repeat: no-repeat;
 	position: relative;
 	color: #fff;
-
+	height: 600px !important;
 }
 
 .rule{
