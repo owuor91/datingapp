@@ -8,7 +8,7 @@
               <i class="fa fa-film" title="videos"></i>
             </div>
             <div class="col-md-4  text-center">
-              <% if @profile.avatar? %>
+              <% if @profile.avatar.url? %>
                 <%= image_tag @profile.avatar.url, :class => "img-circle" %>
               <% else %>
                   <img src="/assets/avatarph-aac822842b411310cb92f1b736c7048c09581d6a72a8304a3e964a5c3931da08.png" class="img-circle" alt="" />
