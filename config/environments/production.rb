@@ -20,6 +20,15 @@ Rails.application.configure do
   config.assets.digest = true
 
 
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['xivapp-useruploads'],
+      :access_key_id => ENV['AKIAJKWBP47HO2UGVTJA'],
+      :secret_access_key => ENV['+T1D/QSjuuP7ETYj84zBsVM96fZouA1a30glVR8Z']
+    }
+  }
+
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.

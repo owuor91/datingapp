@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'paperclip', '~> 4.2'
+gem 'aws-sdk'
 gem 'babosa'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
