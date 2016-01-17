@@ -461,11 +461,13 @@ hr{
 	position: fixed;
 	float: left;
 	margin-left: -90px;
+	margin-top: 20%;
 }
 
 .caretright{
 	position: fixed;
 	margin-left: 85%;
+	margin-top: 20%;
 }
 
 .caretleft>a, .caretright > a{
