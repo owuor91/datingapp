@@ -393,7 +393,7 @@ div > .fa-instagram{
 	background-repeat: no-repeat;
 	position: relative;
 	color: #fff;
-	height: 800px;
+	height: 100%;
 }
 
 .username{
@@ -487,6 +487,7 @@ hr{
 	background-repeat: no-repeat;
 	position: relative;
 	color: #fff;
+	height: 100%;
 }
 .tab-pane > input[type=text]{
 	width: 50%;

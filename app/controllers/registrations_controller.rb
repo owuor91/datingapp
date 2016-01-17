@@ -5,10 +5,6 @@ class RegistrationsController < Devise::RegistrationsController
     new_profile_path
   end
 
-  def after_sign_in_path_for(resource)
-      profiles_url
-  end
-
   private
 
   def sign_up_params
