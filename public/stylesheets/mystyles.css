@@ -509,6 +509,28 @@ tab-pane > input[type=radio]{
 /********************Section #complete********************/
 
 
+/********************Section #Edit********************/
+#edit{
+	background-image: url('/assets/completebg-7001e1e422fcf5ef62d45f48420ddf099d3b8f89e01dda6920d71b732a695075.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	min-height: 700px;
+}
+
+
+.edit_profile > .field > label, .edit_profile > .field > input{
+	color: #fff;
+}
+
+.edit_profile > .field > label{
+	font-size: 25px;
+}
+
+/********************Section #Edit END********************/
+
+
 /******************************************************************************** END SECTION STYLES**************************************************************************************/
 
 
