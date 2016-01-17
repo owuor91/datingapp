@@ -394,7 +394,7 @@ div > .fa-instagram{
 	background-repeat: no-repeat;
 	position: relative;
 	color: #fff;
-	height: 100%;
+	height: 850px;
 }
 
 .username{
@@ -488,7 +488,7 @@ hr{
 	background-repeat: no-repeat;
 	position: relative;
 	color: #fff;
-	height: 100%;
+	height: 850px;
 }
 .tab-pane > input[type=text]{
 	width: 50%;
@@ -604,7 +604,7 @@ span.round-tabs2 > i{
 
 }
 
-.nav-tabs{
+.showtabs > .nav-tabs{
 	margin-top: -60px;
 }
 
