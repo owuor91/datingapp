@@ -24,6 +24,10 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+    if @profile.user_id != current_user.id
+      redirect_to(profile_path(current_user.id))
+    end
+
   end
 
   # POST /profiles
