@@ -166,7 +166,7 @@ input[type=radio]{
 section{
 	max-width: 100%;
 	width: 100%;
-	min-height: 700px;
+	min-height: 800px;
 }
 
 /********************Section #home********************/
@@ -482,6 +482,23 @@ hr{
 
 .caretleft>a, .caretright > a{
 	vertical-align: middle !important;
+}
+
+.progress > i{
+	color: #28193B;
+	background: #fff;
+}
+
+.progress > .fa-long-arrow-left{
+
+}
+
+.progress > .fa-close{
+	color: #ED1C24;
+}
+
+.progress > .fa-check{
+	color: #00B200;
 }
 
 

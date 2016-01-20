@@ -41,9 +41,9 @@
                  <div class="tab-content">
                       <div class="tab-pane fade in active" id="location">
                         <p class="narrow text-center">Hi <%= current_user.name.split(' ').first %>, Tell me a little more about yourself. Where do you live?</p><br/>
-                        <%= f.text_field :location, class: "col-md-offset-3"%><br>
+                        <%= f.text_field :location, class: "col-md-offset-3"%><br> <br>
                         <span class="progress">
-                          <i class="fa fa-long-arrow-left fa-2x"></i><i class="fa fa-close fa-2x"></i><i class="fa fa-check fa-2x"></i>
+                          <i class="fa fa-long-arrow-left fa-2x col-md-6"></i><i class="fa fa-close fa-2x col-md-4"></i> <a href="#rship"><i class="fa fa-check fa-2x col-md-2"></i></a> 
                         </span>
                       </div>
                       <div class="tab-pane fade" id="rship"><p class="narrow text-center">What is your current relationship status?</p><br/>
@@ -56,11 +56,19 @@
                           <%= f.radio_button(:relationship, "In a relationship") %>
                           <%= label_tag(:relationship_relationship, "In a relationship") %><br>
                           <%= f.radio_button(:relationship, "Open relationship") %>
-                          <%= label_tag(:relationship_open, "Open Relationship") %>
+                          <%= label_tag(:relationship_open, "Open Relationship") %><br>
+                          <%= f.radio_button(:relationship, "Complicated") %>
+                          <%= label_tag(:relationship_complicated, "It's complicated") %><br> <br> <br> <br> <br>
+                          <span class="progress">
+                            <i class="fa fa-long-arrow-left fa-2x col-md-6"></i><i class="fa fa-close fa-2x col-md-4"></i><i class="fa fa-check fa-2x col-md-2"></i>
+                          </span>
                       </div>
 
                       <div class="tab-pane fade" id="occupation"><p class="narrow text-center">What is your occupation?</p><br/>
-                        <%= f.text_field :occupation, class: "col-md-offset-3"%>
+                        <%= f.text_field :occupation, class: "col-md-offset-3"%><br> <br>
+                        <span class="progress">
+                          <i class="fa fa-long-arrow-left fa-2x col-md-6"></i><i class="fa fa-close fa-2x  col-md-4"></i><i class="fa fa-check fa-2x  col-md-2"></i>
+                        </span>
                       </div>
 
                       <div class="tab-pane fade" id="education"><p class="narrow text-center">What is your highest level of educational attainment?</p><br/>
@@ -73,17 +81,25 @@
                           <%= f.radio_button(:education, "University") %>
                           <%= label_tag(:education_university, "University") %><br>
                           <%= f.radio_button(:education, "Postgraduate") %>
-                          <%= label_tag(:education_postgraduate, "Postgraduate") %>
+                          <%= label_tag(:education_postgraduate, "Postgraduate") %><br> <br> <br> <br> <br> <br>
+                          <span class="progress">
+                            <i class="fa fa-long-arrow-left fa-2x col-md-6"></i><i class="fa fa-close fa-2x col-md-4"></i><i class="fa fa-check fa-2x col-md-2"></i>
+                          </span>
                       </div>
 
                       <div class="tab-pane fade" id="hobbies"><p class="narrow text-center">What do you like to do at your free time?</p><br/>
-                        <%= f.text_field :hobbies, class: "col-md-offset-3"%>
+                        <%= f.text_field :hobbies, class: "col-md-offset-3"%><br> <br>
+                        <span class="progress">
+                          <i class="fa fa-long-arrow-left fa-2x col-md-6"></i><i class="fa fa-close fa-2x col-md-4"></i><i class="fa fa-check fa-2x col-md-2"></i>
+                        </span>
                       </div>
 
                       <div class="tab-pane fade" id="phone"><p class="narrow text-center">Now <%= current_user.name.split(' ').first %>, would you mind giving me yor phone number?
                       (Your contact details will not be displayed without your permission)</p><br/>
-                        <%= f.text_field :phone, class: "col-md-offset-3"%><br><br>
-
+                        <%= f.text_field :phone, class: "col-md-offset-3"%><br> <br>
+                        <span class="progress">
+                          <i class="fa fa-long-arrow-left fa-2x col-md-6"></i><i class="fa fa-close fa-2x col-md-4"></i><i class="fa fa-check fa-2x col-md-2"></i>
+                        </span>
                       </div>
 
                       <div class="tab-pane fade" id="avi"><p class="narrow text-center">Finally, please upload your avatar<br/>
