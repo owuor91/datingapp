@@ -12,7 +12,7 @@ class ProfilesController < ApplicationController
   def show
     @profile = Profile.find(params[:id])
     @userid = @profile.user_id
-    @user = User.find(params[:id])
+    @user = User.find(@userid)
     @previous = Profile.where("id < ?", params[:id]).order(:id).first
     @next = Profile.where("id > ?", params[:id]).order(:id).first
   end
