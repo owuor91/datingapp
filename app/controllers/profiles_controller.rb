@@ -13,8 +13,11 @@ class ProfilesController < ApplicationController
     @profile = Profile.find(params[:id])
     @userid = @profile.user_id
     @user = User.find(@userid)
-    @previous = Profile.where("id < ?", params[:id]).order(:id).first
-    @next = Profile.where("id > ?", params[:id]).order(:id).first
+    @sex = @user.sex
+
+      @previous = Profile.joins(:user).where("profiles.id < ? AND sex!=?", params[:id], current_user.sex).order(:id).first
+      @next = Profile.joins(:user).where("profiles.id > ? AND sex !=?", params[:id], current_user.sex).order(:id).first
+
   end
 
   # GET /profiles/new
