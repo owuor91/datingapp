@@ -39,11 +39,17 @@
                 <li><a class="round-ghost">UPGRADE</a></li>
                 <li><i class="fa fa-bell-o fa-2x"></i></li>
                 <li><i class="fa fa-envelope-o fa-2x"></i></li>
-                <li> <% if params[:controller]=='profiles' && defined? Profile%>
-                  <%= link_to '<i class="fa fa-gears fa-2x"></i>'.html_safe, edit_profile_path , :class=> 'setlink'%>
+                <li> <% if params[:controller]=='profiles' &&  @profile.id !=nil%>
+                    <%= link_to '<i class="fa fa-gears fa-2x"></i>'.html_safe, edit_profile_path , :class=> 'setlink'%>
                 <% end%></li>
 
-                <li><img class="avi" src="/assets/avatarph-aac822842b411310cb92f1b736c7048c09581d6a72a8304a3e964a5c3931da08.png"/></li>
+                <li>
+                  <%if user_signed_in? && @profile.avatar != nil%>
+                    <%= image_tag @profile.avatar.url, :class => "avi" %>
+                  <%else%>
+                    <img class="avi" src="/assets/avatarph-aac822842b411310cb92f1b736c7048c09581d6a72a8304a3e964a5c3931da08.png"/>
+                  <%end%>
+                </li>
               </ul>
               <p class="navbar-text pull-right">
                 <% if user_signed_in? %>
