@@ -557,7 +557,7 @@ tab-pane > input[type=radio]{
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
-	min-height: 700px;
+	height: 100%;
 }
 
 
