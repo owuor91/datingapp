@@ -44,7 +44,11 @@
                 <% end%></li>
 
                 <li>
+<<<<<<< HEAD
                   <%if user_signed_in? && @profile.avatar != nil%>
+=======
+                  <%if @profile.avatar != nil%>
+>>>>>>> 19b03af072dfa1405b55f042afb4e2807902369d
                     <%= image_tag @profile.avatar.url, :class => "avi" %>
                   <%else%>
                     <img class="avi" src="/assets/avatarph-aac822842b411310cb92f1b736c7048c09581d6a72a8304a3e964a5c3931da08.png"/>
