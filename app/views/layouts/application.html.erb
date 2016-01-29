@@ -44,11 +44,7 @@
                 <% end%></li>
 
                 <li>
-                  <%if user_signed_in? && @profile.avatar != nil%>
-                    <%= image_tag @profile.avatar.url, :class => "avi" %>
-                  <%else%>
                     <img class="avi" src="/assets/avatarph-aac822842b411310cb92f1b736c7048c09581d6a72a8304a3e964a5c3931da08.png"/>
-                  <%end%>
                 </li>
               </ul>
               <p class="navbar-text pull-right">
