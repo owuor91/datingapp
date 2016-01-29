@@ -91,21 +91,21 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif !important;
 }
 
 h1{
 	font-size: 5em;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif !important;
 }
 
 h2{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif !important;
 }
 
 p{
 	font-size: 1.2em;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif !important;
 }
 
 img{
@@ -147,6 +147,7 @@ input[type=radio]{
 	width: 5%;
 	padding: 10px;
 	margin-left: 40%;
+	margin-top: -3%;
 }
 
 .fade > label{
@@ -264,6 +265,10 @@ form{
     all: unset;
   }
 	line-height:10px;
+}
+
+.fa-male{
+	padding-right: 50px;
 }
 
 .field{
@@ -470,13 +475,13 @@ hr{
 .caretleft{
 	position: fixed;
 	float: left;
-	margin-left: -90px;
+	margin-left: -200px;
 	margin-top: 20%;
 }
 
 .caretright{
 	position: fixed;
-	margin-left: 85%;
+	margin-left: 83%;
 	margin-top: 20%;
 }
 
