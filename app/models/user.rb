@@ -21,7 +21,8 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
       user.name = auth.info.name   # assuming the user model has a name
-      user.sex = auth["extra"]["gender"]
+      user.sex = auth.extra.raw_info.gender
+      #user.age = auth.extra.raw_info.birthday
       #user.image = auth.info.image # assuming the user model has an image
     end
   end
@@ -32,6 +33,7 @@ class User < ActiveRecord::Base
         user.email = data["email"] if user.email.blank?
         user.name = data["name"] if user.name.blank?
         user.sex = data["gender"] if user.sex.blank?
+        #user.age = data["birthday"] if user.age.blank?
       end
     end
   end
