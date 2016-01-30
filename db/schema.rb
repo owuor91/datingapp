@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160109094540) do
+ActiveRecord::Schema.define(version: 20160130104405) do
+
+  create_table "omniauths", force: :cascade do |t|
+    t.integer "user_id",  limit: 4
+    t.string  "provider", limit: 255
+    t.string  "uid",      limit: 255
+    t.string  "image",    limit: 255
+    t.string  "url",      limit: 255
+  end
+
+  add_index "omniauths", ["user_id"], name: "index_omniauths_on_user_id", using: :btree
 
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id",             limit: 4
@@ -46,10 +56,13 @@ ActiveRecord::Schema.define(version: 20160109094540) do
     t.string   "name",                   limit: 255
     t.integer  "age",                    limit: 4
     t.string   "sex",                    limit: 255
+    t.string   "provider",               limit: 255
+    t.string   "uid",                    limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "omniauths", "users"
   add_foreign_key "profiles", "users"
 end
