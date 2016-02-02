@@ -522,6 +522,14 @@ hr{
 	color: #00B200;
 }
 
+.modal{
+	width: 50%;
+	left: 25%;
+	height: 70%;
+	top: 15%;
+	background: #fff;
+	color: #000;
+}
 
 /********************Section #profile********************/
 
