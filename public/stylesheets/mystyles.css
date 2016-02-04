@@ -392,9 +392,12 @@ form{
 	width: 100%;
 }
 
+.social-icons{
+	line-height: 480px;
+}
+
 div > .fa{
 	font-size: 15em;
-	margin-top: 170px;
 }
 
 div > .fa-facebook-square{
