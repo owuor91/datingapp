@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160208060043) do
+ActiveRecord::Schema.define(version: 20160208065118) do
 
   create_table "omniauths", force: :cascade do |t|
     t.integer "user_id",  limit: 4
@@ -49,6 +49,22 @@ ActiveRecord::Schema.define(version: 20160208060043) do
     t.string   "photo1_content_type", limit: 255
     t.integer  "photo1_file_size",    limit: 4
     t.datetime "photo1_updated_at"
+    t.string   "photo2_file_name",    limit: 255
+    t.string   "photo2_content_type", limit: 255
+    t.integer  "photo2_file_size",    limit: 4
+    t.datetime "photo2_updated_at"
+    t.string   "photo3_file_name",    limit: 255
+    t.string   "photo3_content_type", limit: 255
+    t.integer  "photo3_file_size",    limit: 4
+    t.datetime "photo3_updated_at"
+    t.string   "photo4_file_name",    limit: 255
+    t.string   "photo4_content_type", limit: 255
+    t.integer  "photo4_file_size",    limit: 4
+    t.datetime "photo4_updated_at"
+    t.string   "photo5_file_name",    limit: 255
+    t.string   "photo5_content_type", limit: 255
+    t.integer  "photo5_file_size",    limit: 4
+    t.datetime "photo5_updated_at"
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
