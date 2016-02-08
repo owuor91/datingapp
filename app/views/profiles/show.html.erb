@@ -3,10 +3,17 @@
   <div class="modal fade" id="my-modal" title="My modal">
       <div class="modal-header">
         <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
-        <h3 id="myModalLabel">Modal header</h3>
+        <h3 id="myModalLabel">Upload profile images</h3>
       </div>
       <div class="modal-body">
-        Modal Body
+        <%= form_for(@profile) do |f| %>
+          <%= f.file_field :photo1 %>
+          <%= f.file_field :photo2 %>
+          <%= f.file_field :photo3 %>
+          <%= f.file_field :photo4 %>
+          <%= f.file_field :photo5 %>
+          <%= f.submit "Save Images", class: "btn btn-primary", :width => 60%>
+        <% end %>
       </div>
       <div class="modal-footer">
         <button aria-hidden="true" class="btn" data-dismiss="modal">Close</button>

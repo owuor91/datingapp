@@ -6,7 +6,7 @@ class Profile < ActiveRecord::Base
   validates_attachment :avatar, content_type: { content_type: /\Aimage\/.*\Z/ },
                                 size: { in: 0..1.megabytes }
 
-  has_attached_file :photo1, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :photo1, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/avatarph.png"
   validates_attachment_content_type :photo1, content_type: /\Aimage\/.*\Z/
 
 
@@ -20,7 +20,7 @@ class Profile < ActiveRecord::Base
 
   has_attached_file :photo4, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :photo4, content_type: /\Aimage\/.*\Z/
-  
+
 
   has_attached_file :photo5, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :photo5, content_type: /\Aimage\/.*\Z/
