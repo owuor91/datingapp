@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160130104405) do
+ActiveRecord::Schema.define(version: 20160208060043) do
 
   create_table "omniauths", force: :cascade do |t|
     t.integer "user_id",  limit: 4
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20160130104405) do
   end
 
   add_index "omniauths", ["user_id"], name: "index_omniauths_on_user_id", using: :btree
+
+  create_table "photos", force: :cascade do |t|
+    t.integer  "profile_id", limit: 4
+    t.string   "photo",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "photos", ["profile_id"], name: "index_photos_on_profile_id", using: :btree
 
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id",             limit: 4
@@ -36,9 +45,16 @@ ActiveRecord::Schema.define(version: 20160130104405) do
     t.string   "avatar_content_type", limit: 255
     t.integer  "avatar_file_size",    limit: 4
     t.datetime "avatar_updated_at"
+    t.string   "photo1_file_name",    limit: 255
+    t.string   "photo1_content_type", limit: 255
+    t.integer  "photo1_file_size",    limit: 4
+    t.datetime "photo1_updated_at"
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
+
+  create_table "uploads", force: :cascade do |t|
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -64,5 +80,6 @@ ActiveRecord::Schema.define(version: 20160130104405) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "omniauths", "users"
+  add_foreign_key "photos", "profiles"
   add_foreign_key "profiles", "users"
 end
