@@ -3,20 +3,21 @@
   <div class="modal fade" id="my-modal" title="My modal">
       <div class="modal-header">
         <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
-        <h3 id="myModalLabel">Upload profile images</h3>
+        <h3 id="myModalLabel">Upload profile pictures</h3>
       </div>
       <div class="modal-body">
         <%= form_for(@profile) do |f| %>
-          <%= f.file_field :photo1 %>
-          <%= f.file_field :photo2 %>
-          <%= f.file_field :photo3 %>
-          <%= f.file_field :photo4 %>
-          <%= f.file_field :photo5 %>
-          <%= f.submit "Save Images", class: "btn btn-primary", :width => 60%>
-        <% end %>
+          Photo 1: <%= f.file_field :photo1 , class: "btn btn-primary"%><br>
+          Photo 2: <%= f.file_field :photo2 , class: "btn btn-primary"%><br>
+          Photo 3: <%= f.file_field :photo3 , class: "btn btn-primary"%><br>
+          Photo 4: <%= f.file_field :photo4 , class: "btn btn-primary"%><br>
+          Photo 5: <%= f.file_field :photo5 , class: "btn btn-primary"%>
+
       </div>
       <div class="modal-footer">
-        <button aria-hidden="true" class="btn" data-dismiss="modal">Close</button>
+          <%= f.submit "Save Images", class: "btn btn-primary" %>
+        <% end %>
+        <!-- <button aria-hidden="true" class="btn" data-dismiss="modal">Close</button> -->
       </div>
   </div>
           <div class="profcard col-md-10 col-md-offset-1">
@@ -44,13 +45,13 @@
           </div>
           <hr width="80%" color="#110026">
           <div class="row">
-            <%= link_to "Open modal", "#my-modal", :class => "btn", "data-toggle" => "modal" %>
+
             <div class="text-center col-md-10 col-md-offset-1">
-              <%= image_tag @profile.photo1.url, :class => "imgstrip" %>
-              <%= image_tag @profile.photo2.url, :class => "imgstrip" %>
-              <%= image_tag @profile.photo3.url, :class => "imgstrip" %>
-              <%= image_tag @profile.photo4.url, :class => "imgstrip" %>
-              <%= image_tag @profile.photo5.url, :class => "imgstrip" %>
+            <span class="modallink"> <%= link_to "Upload Photo", "#my-modal", :class => "btn", "data-toggle" => "modal" %> </span>  <%= image_tag @profile.photo1.url, :class => "imgstrip" %>
+            <span class="modallink"> <%= link_to "Upload Photo", "#my-modal", :class => "btn", "data-toggle" => "modal" %> </span>  <%= image_tag @profile.photo2.url, :class => "imgstrip" %>
+            <span class="modallink"> <%= link_to "Upload Photo", "#my-modal", :class => "btn", "data-toggle" => "modal" %> </span>  <%= image_tag @profile.photo3.url, :class => "imgstrip" %>
+            <span class="modallink"> <%= link_to "Upload Photo", "#my-modal", :class => "btn", "data-toggle" => "modal" %> </span>  <%= image_tag @profile.photo4.url, :class => "imgstrip" %>
+            <span class="modallink"> <%= link_to "Upload Photo", "#my-modal", :class => "btn", "data-toggle" => "modal" %> </span>  <%= image_tag @profile.photo5.url, :class => "imgstrip" %>
             </div>
           </div>
         </div>

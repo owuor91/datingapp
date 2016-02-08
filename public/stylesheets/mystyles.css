@@ -164,6 +164,10 @@ input[type='checkbox']{
 	width: 5%;
 }
 
+input[type='file']{
+	border: none;
+}
+
 textarea{
 	width: 100%;
 	background: transparent;
@@ -532,6 +536,29 @@ hr{
 	top: 15%;
 	background: #fff;
 	color: #000;
+}
+
+
+.modallink {
+    position: absolute;
+    top: 0;
+    color:#000;
+    font-size: 30px;
+    font-weight: bold;
+    background-color:rgba(0,0,0,0.8);
+    width: 160px;
+    height: 160px;
+		margin-top: 280px;
+    padding-top: 0%;
+		z-index: 1;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.modallink:hover {
+    opacity:1;
 }
 
 /********************Section #profile********************/
