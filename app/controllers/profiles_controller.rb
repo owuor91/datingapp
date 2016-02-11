@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  helper_method :own_record
 
   # GET /profiles
   # GET /profiles.json
@@ -17,7 +18,6 @@ class ProfilesController < ApplicationController
 
       @previous = Profile.joins(:user).where("profiles.id < ? AND sex!=?", params[:id], current_user.sex).order(:id).first
       @next = Profile.joins(:user).where("profiles.id > ? AND sex !=?", params[:id], current_user.sex).order(:id).first
-
   end
 
   # GET /profiles/new
@@ -30,7 +30,12 @@ class ProfilesController < ApplicationController
     if @profile.user_id != current_user.id
       redirect_to(profile_path(current_user.id))
     end
+  end
 
+  def own_record
+     if current_user.id == @profile.user_id
+       true
+     end
   end
 
   # POST /profiles
