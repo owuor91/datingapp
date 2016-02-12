@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
    has_one :profile, dependent: :destroy
    accepts_nested_attributes_for :profile
 
+   has_many :favorites
+   has_many :favorite_profiles, through: :favorites, source: :favorited, source_type: 'Profile'
+
 
   def username
     self.email.split(/@/).first
