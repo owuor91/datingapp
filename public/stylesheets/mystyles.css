@@ -518,6 +518,7 @@ hr{
 
 .caretleft>a, .caretright > a{
 	vertical-align: middle !important;
+	z-index: 2;
 }
 
 .progress > i{
