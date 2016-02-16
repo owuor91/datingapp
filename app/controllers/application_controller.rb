@@ -3,6 +3,15 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :authenticate_user!, :except => [:index]
+  helper_method :mark_favorite
+
+  def mark_favorite
+    @favorited = Favorite.where("user_id =? AND favorited_id=?", current_user.id, @profile)
+
+    if @favorited.exists?(favorited_id:@profile)
+      true
+    end
+  end
 
   private
   def stored_location_for(resource)

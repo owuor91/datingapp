@@ -457,14 +457,20 @@ div > .fa-instagram{
 	font-size: 3px;
 }
 
-.left-title > i{
+.left-title >  i{
 	margin-left: 0.4em;
 	margin-right: 0.4em;
 	margin-top: 1.5em;
 }
 
-.left-title > i:hover, .left-title > i:active{
+.left-title > i:hover, .left-title > i:active, .fa-heart{
 	color: #ED1C24;
+}
+
+.left-title > a > i{
+	font-size: 40px;
+	margin-left: 0.4em;
+	margin-right: 0.4em;
 }
 
 .img-circle{

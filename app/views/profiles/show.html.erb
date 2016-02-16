@@ -23,7 +23,15 @@
           <div class="profcard col-md-10 col-md-offset-1">
           <div class="row">
             <div class="col-md-3 col-md-offset-1 left-title">
-              <i class="fa fa-heart-o" title="favourite"></i><%= link_to 'Add to favorites', favorite_profiles_path(profile_id: @profile), method: :post %>
+              <% if mark_favorite%>
+                <%= link_to favorite_profile_path(profile_id: @profile), method: :delete do%>
+                  <i class="fa fa-heart" title="favourite"></i>
+                <%end%>
+              <%else%>
+                <%= link_to favorite_profiles_path(profile_id: @profile), method: :post do%>
+                  <i class="fa fa-heart-o" title="favourite"></i>
+                <%end%>
+              <%end%>
               <i class="fa fa-comments-o" title="chat"></i>
               <i class="fa fa-film" title="videos"></i>
             </div>

@@ -14,6 +14,7 @@ class FavoriteProfilesController < ApplicationController
     redirect_to @profile, notice: 'profile is no longer in favorites'
   end
 
+
   private
 
   def set_profile

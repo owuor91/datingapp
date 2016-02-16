@@ -11,6 +11,9 @@ class User < ActiveRecord::Base
    has_many :favorite_profiles, through: :favorites, source: :favorited, source_type: 'Profile'
 
 
+   
+
+
   def username
     self.email.split(/@/).first
   end
