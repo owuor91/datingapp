@@ -463,7 +463,7 @@ div > .fa-instagram{
 	margin-top: 1.5em;
 }
 
-.left-title > i:hover, .left-title > i:active, .fa-heart{
+.left-title > i:hover, .left-title > i:active, .left-title > a > .fa-heart{
 	color: #ED1C24;
 }
 
@@ -506,12 +506,14 @@ hr{
 	float: left;
 	margin-left: -200px;
 	margin-top: 20%;
+	z-index: 2;
 }
 
 .caretright{
 	position: fixed;
 	margin-left: 83%;
 	margin-top: 20%;
+	z-index: 2;
 }
 
 .caretleft>a, .caretright > a{
