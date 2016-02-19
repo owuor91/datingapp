@@ -49,6 +49,7 @@
                 <div><strong>Relationship:</strong> <%= @profile.relationship %></div>
                 <div><strong>Location:</strong> <%= @profile.location %></div>
               </div>
+              <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation", "data-sid" => current_user.id, "data-rip" => user.id %>
             </div>
           </div>
           <hr width="80%" color="#110026">
