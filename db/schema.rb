@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160219100406) do
+ActiveRecord::Schema.define(version: 20160219104211) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id",    limit: 4
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(version: 20160219100406) do
 
   add_index "favorites", ["favorited_type", "favorited_id"], name: "index_favorites_on_favorited_type_and_favorited_id", using: :btree
   add_index "favorites", ["user_id"], name: "index_favorites_on_user_id", using: :btree
+
+  create_table "messages", force: :cascade do |t|
+    t.text     "body",            limit: 65535
+    t.integer  "conversation_id", limit: 4
+    t.integer  "user_id",         limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id", using: :btree
+  add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
 
   create_table "omniauths", force: :cascade do |t|
     t.integer "user_id",  limit: 4
@@ -117,6 +128,8 @@ ActiveRecord::Schema.define(version: 20160219100406) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "favorites", "users"
+  add_foreign_key "messages", "conversations"
+  add_foreign_key "messages", "users"
   add_foreign_key "omniauths", "users"
   add_foreign_key "photos", "profiles"
   add_foreign_key "profiles", "users"
