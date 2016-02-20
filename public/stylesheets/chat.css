@@ -127,6 +127,10 @@
     color: #ccc;
 }
 
+#conversation_form_1{
+  padding: 0;
+}
+
 .chatboxinput {
     padding: 5px;
     background-color: #ffffff;
@@ -142,6 +146,7 @@
     border: 1px solid #eeeeee;
     margin: 1px;
     overflow: hidden;
+    color: #000;
     resize: none !important;
 }
 
@@ -172,4 +177,8 @@
 
 .chatboxtitle {
     float: left;
+}
+
+.chatboxtitle > .fa{
+  font-size: 17px;
 }
