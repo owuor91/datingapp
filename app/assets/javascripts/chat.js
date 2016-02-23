@@ -94,7 +94,9 @@ var ready = function () {
                 return;
             }
 
-            $("#home").append('<div id="chatbox_' + conversation_id + '" class="chatbox"></div>')
+            $("body").append('<div id="chatbox_' + conversation_id + '" class="chatbox"></div>')
+
+            var recipient_id = $("body").data('receiver');
 
             $.get("/profiles/"+ recipient_id+"/conversations/" + conversation_id, function (data) {
                 $('#chatbox_' + conversation_id).html(data);

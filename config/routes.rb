@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get ':id' => 'users#show', as: :user_profile
   get ':id/setting' => 'users#edit', as: :user_setting
   match ':id/setting' => 'users#update', via: [:put, :patch]
+  match '/profiles/:id/conversations' => 'conversations#create', via: [:post]
+  match '/profiles/:id/conversations/:id' => 'conversations#show', via: [:get]
+  match '/profiles/:id/conversations/:conversation_id/messages' => 'messages#create', via: [:post]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
