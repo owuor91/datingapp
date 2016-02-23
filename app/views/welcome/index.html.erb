@@ -53,21 +53,7 @@
         <!-- <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %> -->
       </div>
       <% end %>
-    <%if user_signed_in?%>
-      <%@users = User.all%>
-      <table>
-      <% @users.each do |user| %>
-          <tr>
-            <td></td>
-            <td><%= user.name %></td>
-            <td>
-              <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
-                          "data-sid" => current_user.id, "data-rip" => user.id %>
-            </td>
-          </tr>
-      <% end %>
-      </table>
-    <%end%>
+    
     </div>
   </div>
 </section>
