@@ -32,7 +32,9 @@
                   <i class="fa fa-heart-o" title="favourite"></i>
                 <%end%>
               <%end%>
-              <i class="fa fa-comments-o" title="chat"></i>
+              <%= link_to "#", class: "start-conversation", "data-sid" => current_user.id, "data-rip" => @user.id do%>
+                <i class="fa fa-comments-o" title="chat"></i>
+              <%end%>  
               <i class="fa fa-film" title="videos"></i>
             </div>
             <div class="col-md-4  text-center">
@@ -50,7 +52,7 @@
                 <div><strong>Location:</strong> <%= @profile.location %></div>
               </div>
 
-              <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation", "data-sid" => current_user.id, "data-rip" => @user.id %>
+
             </div>
           </div>
           <hr width="80%" color="#110026">
