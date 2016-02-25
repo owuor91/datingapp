@@ -63,6 +63,10 @@
     width: 100%;
 }
 
+.chatboxinput >form{
+  padding: 0;
+}
+
 .other .avatar:after {
     content: "";
     position: absolute;
