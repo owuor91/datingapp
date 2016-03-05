@@ -58,20 +58,20 @@
         <div class="dash">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-md-5  text-center notifications">
-                <i class="fa fa-heart fa-2x"></i>
+              <div class="col-md-3 col-md-offset-2  text-center notifications">
+                <i class="fa fa-heart fa-2x"></i><br>Favorites
               </div>
-              <div class="col-md-5 col-md-offset-1 text-center notifications">
-                <i class="fa fa-comments-o fa-2x"></i>
+              <div class="col-md-3 col-md-offset-2 text-center notifications">
+                <i class="fa fa-comments-o fa-2x"></i><br>Messages
               </div>
             </div>
             <br> <br> <br>
             <div class="row">
-              <div class="col-md-5 col-md-offset-1 text-center notifications">
-                <i class="fa fa-user fa-2x"></i>
+              <div class="col-md-3 col-md-offset-2 text-center notifications">
+                <i class="fa fa-user fa-2x"></i><br>Profile
               </div>
-              <div class="col-md-5 col-md-offset-1 text-center notifications">
-                <i class="fa fa-search fa-2x"></i>
+              <div class="col-md-3 col-md-offset-2 text-center notifications">
+                <i class="fa fa-search fa-2x"></i><br>Search
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@
     </div>
   </div>
 </section>
-
+<% if !user_signed_in? %>
 <section id="how">
   <div class="whitelayer">
     <div class="container-fluid">
@@ -180,3 +180,4 @@
     </div>
   </div>
 </section>
+<%end%>
