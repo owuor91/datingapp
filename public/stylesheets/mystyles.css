@@ -192,6 +192,7 @@ textarea{
 	margin: 3% 0% 0% 15%;
 	padding: 30px;
 	border-radius: 5px;
+	color: #fff;
 }
 
 
@@ -317,16 +318,22 @@ form{
 }
 
 .stylish-input-group .input-group-addon{
-    background: white !important;
+  background: #fff !important;
 }
 .stylish-input-group .form-control{
 	border-right:0;
 	box-shadow:0 0 0;
-	border-color:#ccc;
+	height: 50px;
+	background: rgba(0, 0, 0, 0.5);
 }
 .stylish-input-group button{
-    border:0;
-    background:transparent;
+  border:0;
+  background:transparent;
+}
+
+.searchbar{
+	display: none;
+	margin-top: 300px;
 }
 /********************Section #home********************/
 

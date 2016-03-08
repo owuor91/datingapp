@@ -56,6 +56,7 @@
 
       <% if user_signed_in?%>
         <div class="dash">
+          <h2 class="result-title"></h2>
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-3 col-md-offset-2  text-center notifications">
@@ -78,23 +79,24 @@
             </div>
           </div>
         </div>
-
-        
-          <div class="searchbar col-md-8 col-md-offset-2">
-            <div class="input-group stylish-input-group">
-              <input type="text" class="form-control"  placeholder="Search" >
-              <span class="input-group-addon">
-                  <button type="submit">
-                      <span class="glyphicon glyphicon-search"></span>
-                  </button>
-              </span>
-            </div>
-          </div>
-
       <%end%>
 
     </div>
   </div>
+
+
+    <div class="searchbar col-md-8 col-md-offset-2">
+      <div class="input-group stylish-input-group">
+        <input type="text" class="form-control"  placeholder="Search for your lover" >
+        <span class="input-group-addon">
+            <button type="submit" class="searchbtn">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </span>
+      </div>
+    </div>
+
+
 </section>
 <% if !user_signed_in? %>
 <section id="how">
