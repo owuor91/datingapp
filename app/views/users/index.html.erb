@@ -1,0 +1,21 @@
+<section id="home">
+  <div class="container-fluid">
+    <div class="row">
+      <% if user_signed_in?%>
+        <div class="dash">
+          <h2 class="result-title">Showing results for <%= params[:q][:name_cont] %> </h2>
+          <% if @people.present? %>
+            <%@people.each do |mtu| %>
+            <%= mtu.name%>
+            <%end%>
+          <%else%>
+          <p>
+            Sorry, we couldn't find any users called: <%=params[:q][:name_cont]%>
+          </p>
+          <%end%>
+        </div>
+      <%end%>
+
+    </div>
+  </div>
+</section>

@@ -49,8 +49,6 @@
           <%= link_to image_tag('fblogin.png') .html_safe, user_omniauth_authorize_path(:facebook)%>
         <% end %>
 
-
-        <!-- <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %> -->
       </div>
       <% end %>
 
@@ -60,21 +58,29 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-3 col-md-offset-2  text-center notifications">
-                <i class="fa fa-heart fa-2x"></i><br>Favorites
+                <i class="fa fa-heart fa-2x"></i><br><span>
+                  Favorites
+                </span>
               </div>
               <div class="col-md-3 col-md-offset-2 text-center notifications">
-                <i class="fa fa-comments-o fa-2x"></i><br>Messages
+                <i class="fa fa-comments-o fa-2x"></i><br><span>
+                  Messages
+                </span>
               </div>
             </div>
             <br> <br> <br>
             <div class="row">
               <%=link_to profile_path(current_user.id) do %>
                 <div class="col-md-3 col-md-offset-2 text-center notifications">
-                  <i class="fa fa-user fa-2x"></i><br>Profile
+                  <i class="fa fa-user fa-2x"></i><br><span>
+                    Profile
+                  </span>
                 </div>
               <%end%>
               <div class="col-md-3 col-md-offset-2 text-center notifications search">
-                <i class="fa fa-search fa-2x"></i><br>Search
+                <i class="fa fa-search fa-2x"></i><br><span>
+                  Search
+                </span>
               </div>
             </div>
           </div>
@@ -86,14 +92,21 @@
 
 
     <div class="searchbar col-md-8 col-md-offset-2">
-      <div class="input-group stylish-input-group">
-        <input type="text" class="form-control search-term"  placeholder="Search for your lover" >
-        <span class="input-group-addon">
-            <button type="submit" class="searchbtn">
-                <span class="glyphicon glyphicon-search"></span>
-            </button>
-        </span>
-      </div>
+      <%if false%>
+        <%= search_form_for @q , class:"input-group stylish-input-group" do |f| %>
+          <%= f.search_field :name_cont, class: "form-control search-term", placeholder: "Search for your lover" %>
+          <span class="input-group-addon">
+          <%= f.submit 'Search', class: "searchbtn" %>
+          </span>
+        <%end%>
+      <%end%>
+
+      <%= search_form_for @q, class:"input-group stylish-input-group" do |f| %>
+        <%= f.search_field :name_cont, class: "form-control search-term", placeholder: "Search for people" %>
+      <span class="input-group-addon">
+        <%= f.submit %>
+      </span>
+      <%end%>
     </div>
 
 

@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
-  before_action :authenticate_owner!
+  before_action :authenticate_owner!, except: [:index]
   before_filter :set_user, only: [:show, :edit, :update]
+
+  def index
+    @q = User.ransack(params[:q])
+    @people = @q.result(distinct: true)
+  end
 
   def show
     @user = User.find(params[:id])

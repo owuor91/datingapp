@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations', :omniauth_callbacks => "users/omniauth_callbacks" }
   get 'welcome/index'
 
-  resources :profiles
+  resources :profiles, :users
 
   resources :favorite_profiles, only: [:create, :destroy]
 

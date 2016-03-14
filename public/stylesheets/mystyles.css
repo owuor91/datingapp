@@ -335,6 +335,10 @@ form{
 	display: none;
 	margin-top: 300px;
 }
+
+.notifications > span{
+	color: #000 !important;
+}
 /********************Section #home********************/
 
 
