@@ -8,7 +8,7 @@
           <% if @people.present? %>
             <%@people.each do |mtu| %>
             <%= link_to  profile_path(mtu.id) do%>
-              <%mtu.avatar.url(:thumb)%>  <%=mtu.name%>
+              <%=mtu.name%>
             <%end%><br> <br>
             <%end%>
           <%else%>
