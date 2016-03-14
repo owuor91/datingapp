@@ -3,14 +3,18 @@
     <div class="row">
       <% if user_signed_in?%>
         <div class="dash">
-          <h2 class="result-title">Showing results for <%= params[:q][:name_cont] %> </h2>
+          <h2 class="result-title">Showing results for "<%= params[:q][:name_cont] %>" </h2>
+          <br>
           <% if @people.present? %>
             <%@people.each do |mtu| %>
-            <%= mtu.name%>
+            <%= link_to  profile_path(mtu.id) do%>
+              <%=mtu.name%>
+            <%end%>
             <%end%>
           <%else%>
           <p>
-            Sorry, we couldn't find any users called: <%=params[:q][:name_cont]%>
+            <br> <br>
+            Sorry, we couldn't find any users called: "<%=params[:q][:name_cont]%>"
           </p>
           <%end%>
         </div>
