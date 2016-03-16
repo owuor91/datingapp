@@ -66,7 +66,7 @@
 
       <% end %>
 
-    
+
       <% if user_signed_in?%>
         <div class="dash">
           <h2 class="result-title"></h2>
@@ -85,13 +85,13 @@
             </div>
             <br> <br> <br>
             <div class="row">
-              <%=link_to profile_path(current_user.id) do %>
-                <div class="col-md-3 col-md-offset-2 text-center notifications">
-                  <i class="fa fa-user fa-2x"></i><br><span>
-                    Profile
-                  </span>
-                </div>
-              <%end%>
+                <%=link_to profile_path(current_user.profile.id ) do %>
+                  <div class="col-md-3 col-md-offset-2 text-center notifications">
+                    <i class="fa fa-user fa-2x"></i><br><span>
+                      Profile
+                    </span>
+                  </div>
+                <%end%>
               <div class="col-md-3 col-md-offset-2 text-center notifications search">
                 <i class="fa fa-search fa-2x"></i><br><span>
                   Search
