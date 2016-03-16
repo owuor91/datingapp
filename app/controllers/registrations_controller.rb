@@ -5,6 +5,10 @@ class RegistrationsController < Devise::RegistrationsController
     new_profile_path
   end
 
+  def after_inactive_sign_up_path_for(resource)
+    new_user_session_path
+  end
+
   private
 
   def sign_up_params
