@@ -30,6 +30,7 @@ class User < ActiveRecord::Base
       user.sex = auth.extra.raw_info.gender
       #user.age = auth.extra.raw_info.birthday
       #user.image = auth.info.image # assuming the user model has an image
+      user.skip_confirmation!
     end
   end
 
