@@ -85,6 +85,7 @@
             </div>
             <br> <br> <br>
             <div class="row">
+              <% if @profile.present?%>
                 <%=link_to profile_path(current_user.profile.id ) do %>
                   <div class="col-md-3 col-md-offset-2 text-center notifications">
                     <i class="fa fa-user fa-2x"></i><br><span>
@@ -92,6 +93,7 @@
                     </span>
                   </div>
                 <%end%>
+              <%end%>  
               <div class="col-md-3 col-md-offset-2 text-center notifications search">
                 <i class="fa fa-search fa-2x"></i><br><span>
                   Search
