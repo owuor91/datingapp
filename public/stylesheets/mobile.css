@@ -44,6 +44,23 @@
     max-width: 100%;
   }
 
+
+  .dash{
+  	width: 90%;
+  	height: 100%;
+  	margin: 3% 0% 0% 5%;
+  	padding: 10px;
+  	border-radius: 5px;
+  }
+
+  .notifications{
+  	padding: 10px;
+  }
+
+  .notifications > .fa{
+  	font-size: 3em;
+  }
+
   .social-icons{
     font-size: 0.5em;
     line-height: 100px;

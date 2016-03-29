@@ -72,12 +72,12 @@
           <h2 class="result-title"></h2>
           <div class="container-fluid">
             <div class="row">
-              <div class="col-md-3 col-md-offset-2  text-center notifications">
+              <div class="col-md-3 col-md-offset-2 col-xs-5 text-center notifications">
                 <i class="fa fa-heart fa-2x"></i><br><span>
                   Favorites
                 </span>
               </div>
-              <div class="col-md-3 col-md-offset-2 text-center notifications">
+              <div class="col-md-3 col-md-offset-2 col-xs-5 col-xs-offset-2 text-center notifications">
                 <i class="fa fa-comments-o fa-2x"></i><br><span>
                   Messages
                 </span>
@@ -87,14 +87,14 @@
             <div class="row">
               <% if Profile.present?%>
                 <%=link_to profile_path(current_user.profile.id ) do %>
-                  <div class="col-md-3 col-md-offset-2 text-center notifications">
+                  <div class="col-md-3 col-md-offset-2 col-xs-5 text-center notifications">
                     <i class="fa fa-user fa-2x"></i><br><span>
                       Profile
                     </span>
                   </div>
                 <%end%>
               <%end%>
-              <div class="col-md-3 col-md-offset-2 text-center notifications search">
+              <div class="col-md-3 col-md-offset-2 col-xs-5 col-xs-offset-2 text-center notifications search">
                 <i class="fa fa-search fa-2x"></i><br><span>
                   Search
                 </span>
