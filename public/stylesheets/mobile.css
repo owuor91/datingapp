@@ -16,6 +16,10 @@
     max-width: 60%;
   }
 
+  #home{
+    height: 500px !important;
+  }
+
   #how{
     height: 1200px !important;
   }
@@ -27,6 +31,17 @@
   #social{
     height: 600px !important;
     background: none;
+  }
+
+  .signup{
+  	height: 80%;
+  	position: absolute;
+  	top: 45%;
+  	transform: translateY(-50%);
+  }
+
+  .signup > form > a > img{
+    max-width: 100%;
   }
 
   .social-icons{

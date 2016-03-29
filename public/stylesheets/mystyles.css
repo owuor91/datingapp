@@ -227,8 +227,8 @@ section{
 	background-color: rgba(255,255,255,0.3);
 	height: 70%;
 	position: absolute;
-  	top: 40%;
-  	transform: translateY(-50%);
+	top: 40%;
+	transform: translateY(-50%);
 }
 
 .field > label{
