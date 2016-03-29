@@ -16,7 +16,25 @@
     max-width: 60%;
   }
 
-  #how, #plans{
+  #how{
     height: 1200px !important;
+  }
+
+  #plans{
+    height: 1000px !important;
+  }
+
+  #social{
+    height: 600px !important;
+    background: none;
+  }
+
+  .social-icons{
+    font-size: 0.5em;
+    line-height: 100px;
+  }
+
+  .rule{
+    bottom: 20px;
   }
 }
