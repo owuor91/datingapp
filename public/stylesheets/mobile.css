@@ -10,7 +10,13 @@
   h2{
     font-size: 1.8em;
   }
-  #how{
-    height: 1300px !important;
+
+  img{
+    margin: 0 auto ;
+    max-width: 60%;
+  }
+
+  #how, #plans{
+    height: 1200px !important;
   }
 }
