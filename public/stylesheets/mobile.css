@@ -1,0 +1,16 @@
+@media only screen and (max-width : 786px) {
+  h1{
+    font-size: 2.5em;
+  }
+
+  body{
+    font-size: 1.2em;
+  }
+
+  h2{
+    font-size: 1.8em;
+  }
+  #how{
+    height: 1300px !important;
+  }
+}
