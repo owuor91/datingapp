@@ -17,7 +17,7 @@
   }
 
   #home{
-    height: 500px !important;
+    height: 650px !important;
   }
 
   #how{
@@ -68,5 +68,13 @@
 
   .rule{
     bottom: 20px;
+  }
+
+  #profile{
+    display: none;
+  }
+
+  #mobileviews{
+    display: block;
   }
 }

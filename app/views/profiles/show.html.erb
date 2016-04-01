@@ -124,6 +124,40 @@
 
 </section>
 
+<section id="mobileview">
+  <div class="row">
+    <div class="col-xs-5">
+      <% if @profile.avatar %>
+        <%= image_tag @profile.avatar.url(:thumb), :class => "img-circle" %>
+      <% else %>
+          <img src="/assets/avatarph-aac822842b411310cb92f1b736c7048c09581d6a72a8304a3e964a5c3931da08.png" class="img-circle" alt="" width="60%" height="60%"/>
+      <% end %>
+    </div>
+    <div class="col-xs-7">
+      <div class="details">
+        <div><strong>Age: <%= @user.age %> </strong> </div>
+        <div><strong>Relationship:</strong> <%= @profile.relationship %></div>
+        <div><strong>Location:</strong> <%= @profile.location %></div>
+      </div>
+      <% if mark_favorite%>
+        <%= link_to favorite_profile_path(profile_id: @profile), method: :delete do%>
+          <i class="fa fa-heart" title="favourite"></i>
+        <%end%>
+      <%else%>
+        <%= link_to favorite_profiles_path(profile_id: @profile), method: :post do%>
+          <i class="fa fa-heart-o" title="favourite"></i>
+        <%end%>
+      <%end%>
+      <%= link_to "#", class: "start-conversation", "data-sid" => current_user.id, "data-rip" => @user.id do%>
+        <i class="fa fa-comments-o" title="chat"></i>
+      <%end%>
+    </div>
+  </div>
+  <div class="moredetails">
+
+  </div>
+
+</section>
 
 
 

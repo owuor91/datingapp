@@ -618,6 +618,20 @@ hr{
 
 
 
+
+
+
+/********************Section #mobileviews********************/
+#mobileviews{
+	display: none;
+	color: #000;
+}
+/********************Section #mobileviews********************/
+
+
+
+
+
 /********************Section #complete********************/
 #complete{
 	background-image: url('/assets/completebg-7001e1e422fcf5ef62d45f48420ddf099d3b8f89e01dda6920d71b732a695075.png');
