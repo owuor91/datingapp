@@ -131,7 +131,7 @@
         <% if @profile.avatar %>
           <%= image_tag @profile.avatar.url(:thumb), :class => "img-circle" %>
         <% else %>
-            <img src="/assets/avatarph-aac822842b411310cb92f1b736c7048c09581d6a72a8304a3e964a5c3931da08.png" class="img-circle" alt="" width="60%" height="60%"/>
+            <img src="/assets/images/avatarphsmall.png"  alt=""/>
         <% end %>
       </div>
       <div class="col-xs-7">
@@ -202,7 +202,22 @@
           <span> <%= @profile.hobbies %> </span>
         </div>
       </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <%if @previous%>
+            <%= link_to 'Previous', @previous %>
+              <!-- <i class="fa fa-angle-left fa-5x" title="previous"></i> -->
 
+          <% end %>
+        </div>
+        
+        <div class="col-xs-6">
+          <%if @next%>
+            <%= link_to 'Next', @next  %>
+              <!-- <i class="fa fa-angle-right fa-5x" title="next"></i> -->
+          <%end %>
+        </div>
+      </div>
     </span>
   </div>
 </section>
