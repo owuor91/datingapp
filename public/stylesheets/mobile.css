@@ -77,4 +77,18 @@
   #mobileview{
     display: block;
   }
+
+  .mobdetails > div > div > .fa{
+    font-size: 3em;
+  }
+
+  .mobdetails > .row{
+    margin-bottom: 10px;
+  }
+
+  .row > .col-xs-8 > span{
+    height: 40px;
+    line-height: 40px;
+  }
+
 }

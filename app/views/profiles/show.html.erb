@@ -140,23 +140,70 @@
           <div><strong>Relationship:</strong> <%= @profile.relationship %></div>
           <div><strong>Location:</strong> <%= @profile.location %></div>
         </div>
-        <% if mark_favorite%>
-          <%= link_to favorite_profile_path(profile_id: @profile), method: :delete do%>
-            <i class="fa fa-heart" title="favourite"></i>
+        <div class="left-title">
+          <% if mark_favorite%>
+            <%= link_to favorite_profile_path(profile_id: @profile), method: :delete do%>
+              <i class="fa fa-heart" title="favourite"></i>
+            <%end%>
+          <%else%>
+            <%= link_to favorite_profiles_path(profile_id: @profile), method: :post do%>
+              <i class="fa fa-heart-o" title="favourite"></i>
+            <%end%>
           <%end%>
-        <%else%>
-          <%= link_to favorite_profiles_path(profile_id: @profile), method: :post do%>
-            <i class="fa fa-heart-o" title="favourite"></i>
+          <%= link_to "#", class: "start-conversation", "data-sid" => current_user.id, "data-rip" => @user.id do%>
+            <i class="fa fa-comments-o" title="chat"></i>
           <%end%>
-        <%end%>
-        <%= link_to "#", class: "start-conversation", "data-sid" => current_user.id, "data-rip" => @user.id do%>
-          <i class="fa fa-comments-o" title="chat"></i>
-        <%end%>
+        </div>
+
       </div>
     </div>
-    <div class="row">
+    <span class="mobdetails">
+      <div class="row">
+          <div class="col-xs-4">
+            <i class="fa fa-phone"></i><br/> <strong>Phone</strong>
+          </div>
+          <div class="col-xs-8">
+            <span> <%= @profile.phone %> </span>
+          </div>
+      </div>
 
-    </div>
+      <div class="row">
+        <div class="col-xs-4">
+          <i class="fa fa-envelope"></i><br/> <strong>Email</strong>
+        </div>
+        <div class="col-xs-8">
+          <span> <%= @user.email%> </span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-4">
+          <i class="fa fa-briefcase"></i><br/> <strong>Occupation</strong>
+        </div>
+        <div class="col-xs-8">
+          <span> <%= @profile.occupation %> </span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-4">
+          <i class="fa fa-graduation-cap fa-3x"></i><br/> <strong>Education</strong>
+        </div>
+        <div class="col-xs-8">
+          <span> <%= @profile.education %> </span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-4">
+          <i class="fa fa-soccer-ball-o fa-3x"></i><br/> <strong>Hobbies</strong>
+        </div>
+        <div class="col-xs-8">
+          <span> <%= @profile.hobbies %> </span>
+        </div>
+      </div>
+
+    </span>
   </div>
 </section>
 
